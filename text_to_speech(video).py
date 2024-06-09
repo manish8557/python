@@ -26,6 +26,8 @@ def make_text_clip_batch(start_time, end_time, total_duration, text):
 
 def create_video(text_file_path, lang='en', tld='co.uk', output_file='output_video.mp4'):
     """Create the final video from text."""
+    os.environ["IMAGEMAGICK_BINARY"] = "/usr/local/bin/convert"  # Adjust the path if needed
+
     logging.info("Reading text from file.")
     with open(text_file_path, 'r') as file:
         text = file.read()
@@ -67,5 +69,5 @@ def create_video(text_file_path, lang='en', tld='co.uk', output_file='output_vid
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
-    text_file_path = "input_text.txt"
+    text_file_path = "input_text.txt" # Adjust the path if needed
     create_video(text_file_path)
