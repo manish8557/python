@@ -67,5 +67,5 @@ def create_video(text_file_path, lang='en', tld='co.uk', output_file='output_vid
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
-    text_file_path = "/Users/manishkumar/Desktop/mycode/python/input_text.txt"
+    text_file_path = "input_text.txt"
     create_video(text_file_path)
